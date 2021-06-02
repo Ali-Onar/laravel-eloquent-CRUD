@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-    <title>All Post</title>
+    <title>Add Post</title>
 </head>
 <body>
 
     <section class="pt-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 offset-md-3">
+                <div class="col-md-8 offset-md-2">
                     <div class="card">
-                        <div class="card-header">Add Post</div>
+                        <div class="card-header"><b>Add Post</b></div>
                         <div class="card-body">
                             @if (Session::has('post_created'))
                             <div class="alert alert-success" role="alert">

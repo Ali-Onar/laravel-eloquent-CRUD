@@ -21,4 +21,16 @@ class PostController extends Controller
 
         return back()->with('post_created', 'Post has been created successfully!');
     }
+
+    public function getPost()
+    {
+        $posts = Post::orderBy('id', 'ASC')->get();
+        return view('posts', compact('posts'));
+    }
+
+    public function getPostById($id)
+    {
+        $post = Post::where('id', $id)->first();
+        return view('single-post', compact('post'));
+    }
 }
