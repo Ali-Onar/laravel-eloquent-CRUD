@@ -21,6 +21,11 @@
                             <div class="float-right"><a href="/add-post" class="btn btn-secondary">Add Post</a></div>
                         </div>
                         <div class="card-body">
+                            @if (Session::has('post_deleted'))
+                            <div class="alert alert-danger" role="alert">
+                                {{Session::get('post_deleted')}}
+                            </div>                              
+                            @endif
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
@@ -38,6 +43,8 @@
                                             <td>{{ $post->body }}</td>
                                             <td>
                                                 <a href="posts/{{ $post->id }}" class="btn btn-success">Details</a>
+                                                <a href="edit-post/{{ $post->id }}" class="btn btn-primary">Edit</a>
+                                                <a href="delete-post/{{ $post->id }}" class="btn btn-danger">Delete</a>
                                             </td>
                                         </tr>    
                                     @endforeach
