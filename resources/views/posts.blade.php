@@ -11,7 +11,7 @@
                             <div class="float-left">
                                 <b>All Post</b>
                             </div>
-                            <div class="float-right"><a href="/add-post" class="btn btn-secondary">Add Post</a></div>
+                            <div class="float-right"><a href="/add-post" class="btn btn-secondary"><i class="fas fa-plus"></i> Add Post</a></div>
                         </div>
                         <div class="card-body">
                             @if (Session::has('post_deleted'))
@@ -35,9 +35,9 @@
                                             <td>{{ $post->title }}</td>
                                             <td>{{ $post->body }}</td>
                                             <td>
-                                                <a href="posts/{{ $post->id }}" class="btn btn-sm btn-success">Details</a>
-                                                <a href="edit-post/{{ $post->id }}" class="btn btn-sm btn-primary">Edit</a>
-                                                <a href="delete-post/{{ $post->id }}" class="btn btn-sm btn-danger">Delete</a>
+                                                <a href="posts/{{ $post->id }}" class="btn btn-sm btn-success"><i class="fas fa-info-circle"></i></a>
+                                                <a href="edit-post/{{ $post->id }}" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></a>
+                                                <a href="delete-post/{{ $post->id }}" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i></a>
                                             </td>
                                         </tr>    
                                     @endforeach
