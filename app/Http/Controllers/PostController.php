@@ -24,7 +24,8 @@ class PostController extends Controller
 
     public function getPost()
     {
-        $posts = Post::orderBy('id', 'ASC')->get();
+        // ->get, ->all, ->paginate
+        $posts = Post::orderBy('id', 'ASC')->paginate(10);
         return view('posts', compact('posts'));
     }
 

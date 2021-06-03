@@ -5,7 +5,7 @@
     <section class="pt-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 offset-md-2 text-center">
+                <div class="col-md-12 text-center">
                     <div class="card">
                         <div class="card-header">
                             <div class="float-left">
@@ -22,10 +22,10 @@
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
-                                        <th>Post Title</th>
-                                        <th>Post Description</th>
-                                        <th>Action</th>
+                                        <th style="width: 5%">ID</th>
+                                        <th style="width: 10%">Post Title</th>
+                                        <th style="width: 70%">Post Description</th>
+                                        <th style="width: 15%">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -44,7 +44,16 @@
                                     
                                 </tbody>
                             </table>
+                            <span>
+                             {{ $posts->links() }}  
+                             </span>
+                             <style>
+                                 .w-5{
+                                     display: none;
+                                 }
+                             </style>
                         </div>
+                        
                     </div>
                 </div>
             </div>
